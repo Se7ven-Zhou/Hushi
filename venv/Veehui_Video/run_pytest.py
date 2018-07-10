@@ -1,5 +1,7 @@
 # coding:utf-8
 
+import sys
+sys.path.append("D:/Hushi/venv")
 import pytest
 import os
 import time

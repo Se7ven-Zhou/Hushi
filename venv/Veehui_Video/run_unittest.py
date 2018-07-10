@@ -6,6 +6,8 @@ import time
 import unittest
 import Veehui_Video.Config.params_config
 import HTMLTestRunnerNew
+import sys
+sys.path.append("D:/Hushi/venv")
 from Veehui_Video.Config.env_config import Environment
 from Veehui_Video.Common.logger import Logging
 from Veehui_Video.TestCases import test_searchMeeting

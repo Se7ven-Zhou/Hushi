@@ -1,6 +1,8 @@
 # coding:utf-8
 
 import requests
+import sys
+sys.path.append("D:/Hushi/venv")
 from Veehui_Video.Common.readData import Read_Data
 from Veehui_Video.Common.logger import Logging
 from Veehui_Video.Common.package_params import Parameter
