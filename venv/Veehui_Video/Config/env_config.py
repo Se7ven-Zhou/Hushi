@@ -1,0 +1,24 @@
+# coding :uff-8
+
+class Environment:
+
+    def __init__(self):
+
+       pass
+
+    def Test(self):
+        ip = "http://119.23.132.26"
+        port = "8092"
+        url = ip + ":" + port
+        return url
+
+    def Online(self):
+        ip = "119.23.132.26"
+        port = "8091"
+        url = ip + ":" + port
+        return url
+
+if __name__ == "__main__":
+
+    url = Environment().Test()
+    print(url)
