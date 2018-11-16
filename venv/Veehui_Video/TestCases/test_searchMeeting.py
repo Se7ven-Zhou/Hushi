@@ -1,11 +1,11 @@
 # coding:utf-8
 
 import requests
-from Veehui_Video.Common.readData import Read_Data
-from Veehui_Video.Common.logger import Logging
-from Veehui_Video.Common.package_params import Parameter
-from Veehui_Video.Config.env_config import Environment
-import Veehui_Video.Config.params_config
+from HuShi.Common.readData import Read_Data
+from HuShi.Common.logger import Logging
+from HuShi.Common.package_params import Parameter
+from HuShi.Config.env_config import Environment
+import HuShi.Config.params_config
 import unittest
 import pytest
 import os
@@ -19,9 +19,9 @@ class test_SearchMeeting(unittest.TestCase):
         super(test_SearchMeeting, self).__init__(methodName)
 
         self.api = "/meeting/search"
-        self.signature = Veehui_Video.Config.params_config.signature
-        self.token = Veehui_Video.Config.params_config.token
-        self.headers = Veehui_Video.Config.params_config.headers
+        self.signature = HuShi.Config.params_config.signature
+        self.token = HuShi.Config.params_config.token
+        self.headers = HuShi.Config.params_config.headers
 
     def setUp(self):
 

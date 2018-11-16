@@ -1,19 +1,23 @@
 # coding:utf-8
 
-
+import sys
+sys.path.append("C:/Users/Administrator/PycharmProjects/pythonStudy/venv")
 import os
 import time
 import unittest
-import Veehui_Video.Config.params_config
+import HuShi.Config.params_config
 import HTMLTestRunnerNew
-import sys
-sys.path.append("D:/Hushi/venv")
-from Veehui_Video.Config.env_config import Environment
-from Veehui_Video.Common.logger import Logging
-from Veehui_Video.TestCases import test_searchMeeting
-from Veehui_Video.TestCases.test_searchMeeting import test_SearchMeeting
+from HuShi.Config.env_config import Environment
+from HuShi.Common.cleanDada import CleanData
+from HuShi.Common.logger import Logging
+from HuShi.TestCases import test_searchMeeting
+from HuShi.TestCases.test_searchMeeting import test_SearchMeeting
+from HuShi.TestCases import test_business_ddt
 
 if __name__ == "__main__":
+    # 初始化账号
+    sql = "DELETE FROM user_operation_record WHERE user_id=58 AND operation_type_code=02 order by create_time DESC LIMIT 1"
+    CleanData().InitData(sql)
 
     suite = unittest.TestSuite()
     loader = unittest.TestLoader()
@@ -21,14 +25,13 @@ if __name__ == "__main__":
     testcase_path = os.getcwd() + "/TestCases" # 测试用例路径
 
     # suite.addTest(loader.loadTestsFromTestCase(test_SearchMeeting))
-    suite.addTest(loader.loadTestsFromModule(test_searchMeeting))
+    suite.addTest(loader.loadTestsFromModule(test_business_ddt))
 
     now = time.strftime("%Y-%m-%d_%H_%M_%S")  # 获取当前时间
     report_address = os.getcwd() + "\Reports"
-    report_name = "python_unittest_" + now + ".html"
+    report_name = "接口自动化测试" + now + ".html"
     report_path = os.path.join(report_address,report_name)
     print(report_path)
     with open(report_path, "wb+") as f:
         runner = HTMLTestRunnerNew.HTMLTestRunner(stream=f, verbosity=2, title="Requests_AutoTest", tester="Seven")
         runner.run(suite)
-

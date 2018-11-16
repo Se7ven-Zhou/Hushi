@@ -7,8 +7,8 @@ class Environment:
        pass
 
     def Test(self):
-        ip = "http://119.23.132.26"
-        port = "8092"
+        ip = "http://apigw-dev.veehui.com"
+        port = "80"
         url = ip + ":" + port
         return url
 

@@ -1,9 +1,9 @@
 # coding :utf-8
 
 import requests
-from Veehui_Video.Config.env_config import Environment
-import Veehui_Video.Config.params_config
-from Veehui_Video.Common.package_params import Parameter
+from HuShi.Config.env_config import Environment
+import HuShi.Config.params_config
+from HuShi.Common.package_params import Parameter
 
 class Login:
 

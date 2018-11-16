@@ -2,13 +2,13 @@
 
 import requests
 import sys
-sys.path.append("D:/Hushi/venv")
-from Veehui_Video.Common.readData import Read_Data
-from Veehui_Video.Common.logger import Logging
-from Veehui_Video.Common.package_params import Parameter
-from Veehui_Video.Config.env_config import Environment
-from Veehui_Video.TestCases.test_requests import Requests
-import Veehui_Video.Config.params_config
+sys.path.append("C:/Users/Administrator/PycharmProjects/pythonStudy/venv")
+from HuShi.Common.readData import Read_Data
+from HuShi.Common.logger import Logging
+from HuShi.Common.package_params import Parameter
+from HuShi.Config.env_config import Environment
+from HuShi.TestCases.test_requests import Requests
+import HuShi.Config.params_config
 import pytest
 import os
 import time

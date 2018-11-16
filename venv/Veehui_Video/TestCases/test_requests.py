@@ -1,12 +1,12 @@
 # coding:utf-8
 
 import requests
-from Veehui_Video.Common.readData import Read_Data
-from Veehui_Video.Common.logger import Logging
-from Veehui_Video.Common.package_params import Parameter
-from Veehui_Video.Config.env_config import Environment
-from Veehui_Video.Common.writeReport import WriteReport
-import Veehui_Video.Config.params_config
+from HuShi.Common.readData import Read_Data
+from HuShi.Common.logger import Logging
+from HuShi.Common.package_params import Parameter
+from HuShi.Config.env_config import Environment
+from HuShi.Common.writeReport import WriteReport
+import HuShi.Config.params_config
 import pytest
 import os
 import time
@@ -17,9 +17,11 @@ class Requests:
     def __init__(self):
 
         # self.api = "/meeting/search"
-        self.signature = Veehui_Video.Config.params_config.signature
-        self.token = Veehui_Video.Config.params_config.token
-        self.headers = Veehui_Video.Config.params_config.headers
+        self.signature = HuShi.Config.params_config.signature
+        self.token = HuShi.Config.params_config.token
+        self.headers = HuShi.Config.params_config.headers
+
+
 
     def test_Requests(self,filename):
 
